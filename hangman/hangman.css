@@ -1,0 +1,187 @@
+html, body { 
+    font-size: 1.2em;
+    font-family: 'Arvo', serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+/* Background Image Styling */
+.form-img {
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%; 
+    z-index: -1; 
+}
+
+.form-img img {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 20cm;
+    height: 20cm;
+    object-fit: cover; 
+    opacity: 0.5; 
+}
+
+/* Tagline Styling */
+p {
+    font-size: 4rem;
+    color: #2c2e2e;
+    position: absolute; 
+    top: 10%;  
+    right: 5%;
+    z-index: 1;
+    text-align: right;
+    max-width: 20rem;
+}
+
+/* General Text and Link Styling */
+a {
+    color: #000;
+    margin: 0.2em;
+    text-decoration: none;
+}
+
+#hangm_gameover, #hangm_victory {
+    font-size: 2em;
+}
+
+section#hangman {
+    height: 30.5em;
+    overflow: hidden;
+}
+
+/* Hangman Animation */
+#hangm {
+    text-align: center;
+}
+
+.h {
+    opacity: 0;
+}
+
+#hangm_animation {
+    height: 10em;
+    margin: 0 auto;
+    width: 11em;
+}
+
+#hangm_word, 
+#hangm_guesses {
+    letter-spacing: 1em;
+}
+
+/* Character Styling */
+.man_head {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px; 
+    background-color: #FFCC99;
+    position: relative;
+    bottom: 150px;
+    left: 112px;
+}
+
+.man_upper {
+    background: #000066;
+    width: 40px;
+    height: 50px;
+    position: relative;
+    left: 112px;
+    bottom: 150px;
+}
+
+.man_lower {
+    background: #330099;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 117px;
+    bottom: 150px;
+}
+
+/* Pole Styling */
+.pole_h {
+    background: #000;
+    width: 100px;
+    height: 8px;
+    position: relative;
+    left: 46px;
+}
+
+.pole_v {
+    width: 8px;
+    height: 150px;
+    background: #000;
+    left: 46px;
+    position: relative;
+}
+
+.pole_b {
+    border-color: transparent transparent #000000 transparent;
+    border-width: 0 50px 50px 50px;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    bottom: 10px;
+    position: relative;
+}
+
+.rope {
+    width: 6px;
+    height: 40px;
+    background-color: #996633;
+    position: relative;
+    bottom: 150px;
+    left: 130px;
+}
+
+/* Guess Box Styling */
+#hangm_guessbox {
+    height: 8em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#hangm_guessbox input {
+    font-size: 2em;
+    padding: 0.5em;
+    width: 6em;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-top: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#hangm_guessbox input:focus {
+    border-color: #2980b9;
+}
+
+/* Button Styling */
+button#btn-start {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 1em 5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 3em;
+}
+
+button#btn-start:hover {
+    background-color: #3498db;
+}
