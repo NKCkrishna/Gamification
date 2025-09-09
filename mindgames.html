@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play Fun Games!</title>
+  <link rel="shortcut icon" href="images/games_icon.png" type="image/x-icon">
+  <style>
+    /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 20px;
+}
+
+.form-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.form-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; 
+}
+
+h1 {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Games Section */
+.games-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Individual Game Card */
+.game {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 400px;
+    width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.game:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Game Image */
+.game-image {
+    width: 100%;
+    height: 215px;
+    object-fit: cover;
+    border-bottom: 2px solid #eee;
+}
+
+/* Game Title */
+h2 {
+    font-size: 2.25rem;
+    color: #34495e;
+    margin: 15px 0;
+}
+
+/* Game Description */
+p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* Play Now Button */
+.btn {
+    background-color: #2980b9;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .games-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game {
+        width: 90%;
+    }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Twist Your Thoughts, Solve the Mystery.</h1>
+    <div class="form-img">
+      <img src="images/mind-matrix.jpg" alt="Background Image">
+    </div>
+    <div class="games-section">
+      <!-- Game 1 Section -->
+      <div class="game">
+        <img src="images/chess.jpg" class="game-image">
+        <h2>Chess</h2>
+        <p>Strategy, Skill, and a Dash of Genius.</p>
+        <a href="*" class="btn play-btn">Play Now</a>
+      </div>
+
+      <!-- Game 2 Section -->
+      <div class="game">
+        <img src="images/tic-tac-toe.jpg" class="game-image">
+        <h2>Tic-Tac-Toe</h2>
+        <p>X's and O's, Who Will Own the Board?</p>
+        <a href="*" class="btn play-btn">Play Now</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

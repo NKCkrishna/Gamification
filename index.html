@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamification</title>
+    <link rel="shortcut icon" href="images/games_icon.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    overflow-x: hidden; 
+    overflow-y: auto;   
+}
+
+.dashboard {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.form-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+
+.container > .box:nth-child(5) {
+    grid-column: 2 / 3; 
+}
+
+.container > .box:nth-child(6) {
+    grid-column: 3 / 4; 
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 200px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 1 rem;
+    margin: 15px 0;
+}
+
+p {
+    font-size: 1.2 rem;
+    font-family: Georgia;
+    color: #000000;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.btn {
+    background-color: #4e34b6;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 2em;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00ccff;
+}
+
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+    .container > .box:nth-child(5) {
+        grid-column: 2 / 3; 
+    }
+    .container > .box:nth-child(6) {
+        grid-column: 3 / 4;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .container > .box:nth-child(5),
+    .container > .box:nth-child(6) {
+        grid-column: auto; 
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr; 
+    }
+    .header h1 {
+        font-size: 2rem; 
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="form-img">
+            <img src="images/gamification.jpg" alt="Background Image">
+        </div>
+        <header class="header">
+            <h1>Gamification</h1>
+        </header>
+        <div class="container">
+            <div class="box Mathematics">
+                <h2>Mathematics</h2>
+                <p>Enjoy gaming, play with numbers and solve puzzles.</p>
+                <a href="maths.html" class="btn">Explore Math</a>
+            </div>
+            <div class="box Knowledge">
+                <h2>Knowledge</h2>
+                <p>Gain insights and expand your horizons.</p>
+                <a href="knowledge.html" class="btn">Gain Knowledge</a>
+            </div>
+            <div class="box Social-Science">
+                <h2>Social Science</h2>
+                <p>Understand societies and cultural dynamics better.</p>
+                <a href="social.html" class="btn">Learn Social</a>
+            </div>
+            <div class="box Science">
+                <h2>Science</h2>
+                <p>Discover the wonders of the natural world.</p>
+                <a href="science.html" class="btn">Explore Science</a>
+            </div>
+            <div class="box Mind-Matrix">
+                <h2>Mind Matrix</h2>
+                <p>Enhance logical thinking and cognitive abilities.</p>
+                <a href="mindgames.html" class="btn">Boost Mind</a>
+            </div>
+            <div class="box Programming">
+                <h2>Programming</h2>
+                <p>Learn to code and build skills in programming.</p>
+                <a href="codegames.html" class="btn">Code Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
