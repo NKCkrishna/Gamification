@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    background: linear-gradient(135deg, hsl(180, 5%, 92%), hsl(180, 5%, 92%));
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.form-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.form-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; 
+}
+
+h1 {
+    position: absolute;
+    color: #00aeef;
+    top: 10px;
+    text-align: center;
+    font-size: 4.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+canvas {
+    display: block;
+    border: 2px solid white;
+    border-radius: 10px; 
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.2), 0px 4px 15px rgba(0, 0, 0, 0.6); /* Glow effect */
+    margin: auto;
+    margin-top: 20vh;
+    background: linear-gradient(145deg, #444, #222); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+canvas:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 12px 30px rgba(255, 255, 255, 0.3), 0px 6px 20px rgba(0, 0, 0, 0.8); /* Enhanced glow */
+}
+
